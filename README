@@ -1,0 +1,28 @@
+Bonjour,
+
+Ce répertoire regroupe la version 3 du compteur. 
+Le code présent effectue exactement la meme chose que le code en version 2. La seule différence notable est dans le dossier "GTK" qui propose
+un code d'essai de cette librairie.
+
+Il garde les options de base:
+  - Sauvegarde automatique toutes les minutes
+  - Création et  sauvegarde d'un graphique
+  - Interface graphique grace a opencv
+  - Traitement video
+  - Comptage
+  
+Il suffit de compiler le fichier "camera.c" sous linux avec la librairie openCV pour essayer le programme
+    g++ -Wall -o executable camera.c `pkg-config --cflags --libs opencv`
+    
+Pour tester le programme test de GTK:
+Aller dans le répertoire GTK et rechercher le code source "GTK.c"
+Installer les libirairies nécessaire GTK
+lancer la compilation grace a la commande 
+  g++ -Wall -o executable GTK.c `pkg-config --cflags --libs gtk+-2.0`
+  
+Pour tester le programme de detection avec la librairie GTK :
+Aller dans le répertoire GTK et rechercher le code source "camera.c"
+Installer les libirairies nécessaire GTK + opencv
+lancer la compilation grace a la commande 
+  g++ -Wall -o executable GTK.c `pkg-config --cflags --libs opencv gtk+-2.0`
+  
